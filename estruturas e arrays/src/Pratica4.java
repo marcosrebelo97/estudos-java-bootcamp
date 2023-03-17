@@ -5,7 +5,6 @@ public class Pratica4 {
         Scanner scan = new Scanner(System.in);
 
         int qntdNumeros, qntdPares = 0, qntdImpares = 0;
-        int numero;
 
         System.out.println("Quantidade de números: ");
         qntdNumeros = scan.nextInt();
@@ -13,7 +12,7 @@ public class Pratica4 {
         int cont = 0;
         do {
             System.out.println("Número: ");
-            numero = scan.nextInt();
+            int numero = scan.nextInt();
 
             if (numero % 2 == 0)
                 qntdPares++;
