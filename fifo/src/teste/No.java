@@ -8,7 +8,7 @@ public class No {
     public No() {
     }
 
-    public No(Object object, No refNo) {
+    public No(Object object) {
         this.refNo = null;
         this.object = object;
     }
