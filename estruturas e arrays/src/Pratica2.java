@@ -5,10 +5,8 @@ public class Pratica2 {
 
         Scanner scan = new Scanner(System.in);
 
-        int nota;
-
         System.out.print("Nota: ");
-        nota = scan.nextInt();
+        int nota = scan.nextInt();
 
         while (nota < 0 | nota > 10) {
             System.out.println("Nota invalida!! Digite novamente: ");
