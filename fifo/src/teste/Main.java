@@ -3,12 +3,12 @@ package teste;
 public class Main {
     public static void main(String[] args) {
 
-        Fifo minhaFila = new Fifo();
+        Fifo<String> minhaFila = new Fifo<>();
 
-        minhaFila.enqueue(new No("primeiro"));
-        minhaFila.enqueue(new No("segundo"));
-        minhaFila.enqueue(new No("terceiro"));
-        minhaFila.enqueue(new No("quarto"));
+        minhaFila.enqueue("primeiro");
+        minhaFila.enqueue("segundo");
+        minhaFila.enqueue("terceiro");
+        minhaFila.enqueue("quarto");
 
         System.out.println(minhaFila);
 
@@ -16,12 +16,12 @@ public class Main {
          * System.out.println(minhaFila.dequeue());
          * System.out.println(minhaFila);
          */
+        System.out.println(minhaFila.dequeue());
+        System.out.println(minhaFila);
 
-        /*
-         * testando
-         * System.out.println(minhaFila.first());
-         * System.out.println(minhaFila);
-         */
+        System.out.println(minhaFila.first());
+        System.out.println(minhaFila);
+
     }
 
 }

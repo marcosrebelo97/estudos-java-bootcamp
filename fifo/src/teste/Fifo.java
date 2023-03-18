@@ -1,19 +1,24 @@
 package teste;
 
-public class Fifo {
-    private No refNoEntradaFila;
+public class Fifo<T> {
+
+    private No<T> refNoEntradaFila;
 
     public Fifo() {
         this.refNoEntradaFila = null;
     }
 
-    public void enqueue(Object obj) {
-        No novoNo = new No(obj);
+    public boolean isEmpty() {
+        return refNoEntradaFila == null ? true : false;
+    }
+
+    public void enqueue(T object) {
+        No novoNo = new No(object);
         novoNo.setRefNo(refNoEntradaFila);
         refNoEntradaFila = novoNo;
     }
 
-    public Object first() {
+    public T first() {
         if (!this.isEmpty()) {
             No primeiroNo = refNoEntradaFila;
             while (true) {
@@ -23,12 +28,12 @@ public class Fifo {
                     break;
                 }
             }
-            return primeiroNo.getObject();
+            return (T) primeiroNo.getObject();
         }
         return null;
     }
 
-    public Object dequeue() {
+    public T dequeue() {
         if (!this.isEmpty()) {
             No primeiroNo = refNoEntradaFila;
             No noAuxiliar = refNoEntradaFila;
@@ -41,13 +46,9 @@ public class Fifo {
                     break;
                 }
             }
-            return primeiroNo.getObject();
+            return (T) primeiroNo.getObject();
         }
         return null;
-    }
-
-    public boolean isEmpty() {
-        return refNoEntradaFila == null ? true : false;
     }
 
     @Override
