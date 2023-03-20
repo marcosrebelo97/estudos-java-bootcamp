@@ -6,7 +6,11 @@ public class Pilha {
         this.refNoEntradaPilha = null;
     }
 
-    public void push(No novoNo) {
+    public boolean isEmpty() {
+        return refNoEntradaPilha == null ? true : false;
+    }
+
+    public void push(No novoNo) { // empilhar
         No refAuxiliar = refNoEntradaPilha;
         refNoEntradaPilha = novoNo;
         refNoEntradaPilha.setRefNo(refAuxiliar);
@@ -23,10 +27,6 @@ public class Pilha {
 
     public No top() {
         return refNoEntradaPilha;
-    }
-
-    public boolean isEmpty() {
-        return refNoEntradaPilha == null ? true : false;
     }
 
     @Override
