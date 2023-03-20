@@ -6,7 +6,7 @@ public class Pilha {
         this.refNoEntradaPilha = null;
     }
 
-    public boolean isEmpty() {
+    public boolean isEmpty() { // verifica se está vazia
         return refNoEntradaPilha == null ? true : false;
     }
 
@@ -16,7 +16,7 @@ public class Pilha {
         refNoEntradaPilha.setRefNo(refAuxiliar);
     }
 
-    public No pop() {
+    public No pop() { // desempilhar
         if (!this.isEmpty()) {
             No noPoped = refNoEntradaPilha;
             refNoEntradaPilha = refNoEntradaPilha.getRefNo();
@@ -25,7 +25,7 @@ public class Pilha {
         return null;
     }
 
-    public No top() {
+    public No top() { // ultimo valor
         return refNoEntradaPilha;
     }
 
