@@ -29,7 +29,7 @@ public class ListaEncadeada<T> {
         No<T> noAuxiliar = referenciaEntrada;
         No<T> noRetorno = null;
 
-        for (int i = 0; i < this.size() - 1; i++) {
+        for (int i = 0; i <= index; i++) {
             noRetorno = noAuxiliar;
             noAuxiliar = noAuxiliar.getProximoNo();
         }
@@ -94,8 +94,7 @@ public class ListaEncadeada<T> {
         }
 
         strRetorno += null;
-
-        return "[No{conteudo=" + noAuxiliar.getConteudo() + "}] --->";
+        return strRetorno;
 
     }
 
