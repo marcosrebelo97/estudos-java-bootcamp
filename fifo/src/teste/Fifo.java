@@ -12,7 +12,7 @@ public class Fifo<T> {
         return refNoEntradaFila == null ? true : false;
     }
 
-    public void enqueue(T object) {
+    public void enqueue(T object) { // enfileirar
         No novoNo = new No(object);
         novoNo.setRefNo(refNoEntradaFila);
         refNoEntradaFila = novoNo;
@@ -33,7 +33,7 @@ public class Fifo<T> {
         return null;
     }
 
-    public T dequeue() {
+    public T dequeue() { // desinfileirar
         if (!this.isEmpty()) {
             No primeiroNo = refNoEntradaFila;
             No noAuxiliar = refNoEntradaFila;
