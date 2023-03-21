@@ -1,8 +1,8 @@
 public class NoDuplo<T> {
 
     private T conteudo;
-    private NoDuplo<T> noProximo;
-    private NoDuplo<T> noPrevio;
+    private NoDuplo<T> noProximo; // nó posterior
+    private NoDuplo<T> noPrevio; // nó anterior
 
     public NoDuplo(T conteudo) {
         this.conteudo = conteudo;
