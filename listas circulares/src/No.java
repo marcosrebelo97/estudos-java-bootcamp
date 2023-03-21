@@ -3,7 +3,7 @@ public class No<T> {
     private T conteudo;
     private No<T> noProximo;
 
-    public No() {
+    public No(T conteudo) {
         this.noProximo = null;
         this.conteudo = conteudo;
     }
