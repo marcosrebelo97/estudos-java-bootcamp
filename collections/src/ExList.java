@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class ExList {
@@ -25,6 +26,15 @@ public class ExList {
         System.out.println("Conferindo nota na lista: " + notas.contains(10d));
 
         System.out.println("Menor nota: " + Collections.min(notas)); // max p/ maior
+
+        System.out.print("Soma dos valores: ");
+        Iterator<Double> iterator = notas.iterator();
+        Double soma = 0d;
+        while (iterator.hasNext()) {
+            Double next = iterator.next();
+            soma += next;
+        }
+        System.out.println(soma);
 
     }
 }
