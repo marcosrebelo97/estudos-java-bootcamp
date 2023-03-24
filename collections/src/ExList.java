@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class ExList {
@@ -13,8 +15,16 @@ public class ExList {
         notas.add(12.0);
 
         System.out.println(notas);
+        // System.out.println("Posição: " + notas.indexOf(9d));
+        notas.add(4, 100d);
+        System.out.println(notas);
 
-        System.out.println("Posição: " + notas.indexOf(9d));
+        notas.set(notas.indexOf(10d), 50.0);
+        System.out.println(notas);
+
+        System.out.println("Conferindo nota na lista: " + notas.contains(10d));
+
+        System.out.println("Menor nota: " + Collections.min(notas)); // max p/ maior
 
     }
 }
