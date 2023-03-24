@@ -14,5 +14,7 @@ public class ExList {
 
         System.out.println(notas);
 
+        System.out.println("Posição: " + notas.indexOf(9d));
+
     }
 }
