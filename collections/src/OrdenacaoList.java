@@ -21,12 +21,13 @@ public class OrdenacaoList {
         System.out.println(meusGatos);
 
         System.out.println("--\tOrdem Natural\t--");
+        Collections.sort(meusGatos);
         System.out.println(meusGatos);
 
     }
 }
 
-class Gato {
+class Gato implements Comparable<Gato> {
     private String nome;
     private Integer idade;
     private String cor;
@@ -56,6 +57,13 @@ class Gato {
                 ", idade = " + getIdade() +
                 ", cor = " + getCor() +
                 "}";
+    }
+
+    @Override
+    public int compareTo(Gato gato) {
+        // TODO Auto-generated method stub
+        // throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
+        return this.getNome().compareToIgnoreCase(gato.getNome());
     }
 
 }
