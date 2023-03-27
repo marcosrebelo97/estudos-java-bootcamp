@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class OrdenacaoList {
+public class ExOrdenacaoList {
     public static void main(String[] args) {
 
         List<Gato> meusGatos = new ArrayList<>() {
@@ -23,8 +23,6 @@ public class OrdenacaoList {
         System.out.println("--\tOrdem Natural\t--");
         Collections.sort(meusGatos);
         System.out.println(meusGatos);
-
-        System.out.println("--\tOrdem Idade\t--");
 
     }
 }
