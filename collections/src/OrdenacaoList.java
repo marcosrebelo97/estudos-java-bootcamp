@@ -24,6 +24,8 @@ public class OrdenacaoList {
         Collections.sort(meusGatos);
         System.out.println(meusGatos);
 
+        System.out.println("--\tOrdem Idade\t--");
+
     }
 }
 
