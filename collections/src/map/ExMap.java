@@ -1,5 +1,6 @@
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -38,6 +39,13 @@ public class ExMap {
                 modeloEco = entry.getKey();
             System.out.println("\nModelo mais econômico: " + modeloEco + " - " + consumo);
         }
+
+        Iterator<Double> iterator = carrosPopulares.values().iterator();
+        double soma = 0d;
+        while (iterator.hasNext()) {
+            soma += iterator.next();
+        }
+        System.out.println("\nSoma dos consumos: " + soma);
 
     }
 }
