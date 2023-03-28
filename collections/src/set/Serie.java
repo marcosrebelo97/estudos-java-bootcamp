@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Serie {
+public class Serie implements Comparable<Serie> {
     private String nome;
     private String genero;
     private Integer tempoEpisodio;
@@ -47,5 +47,16 @@ public class Serie {
     @Override
     public int hashCode() {
         return Objects.hash(nome, genero, tempoEpisodio);
+    }
+
+    @Override
+    public int compareTo(Serie serie) {
+        // TODO Auto-generated method stub
+        // throw new UnsupportedOperationException("Unimplemented method 'compareTo'");
+        int tempoEpisodio = Integer.compare(this.getTempoEpisodio(), serie.getTempoEpisodio());
+        if (tempoEpisodio != 0)
+            return tempoEpisodio;
+
+        return this.getGenero().compareTo(serie.getGenero());
     }
 }
