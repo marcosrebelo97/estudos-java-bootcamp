@@ -14,6 +14,8 @@ public class ExceptionsTeste {
         Conta contaOrigem = new Conta("13212", 0);
         Conta contaDestino = new Conta("87954", 100);
 
+        TransferenciaContas transferenciaContas = new TransferenciaContas();
+
         assertThrows(IllegalArgumentException.class,
                 () -> transferenciaContas.transfere(contaOrigem, contaDestino, -1));
 
