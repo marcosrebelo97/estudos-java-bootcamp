@@ -1,9 +1,9 @@
 package test;
 
 import static org.junit.Assert.assertTrue;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
-import org.junit.*;
-
 import main.GerenciadorConexaoBD;
 
 public class ConsultarDadosPessoaTeste {
@@ -13,6 +13,14 @@ public class ConsultarDadosPessoaTeste {
         GerenciadorConexaoBD.iniciarConexao();
         System.out.println("Rodou configuraConexao");
     }
+
+    /*
+     * @BeforeEach
+     * public void insereDadosParaTeste() {
+     * GerenciadorConexaoBD.insereDados(new Pessoa("Joao", LocalDateTime.of(200, 1,
+     * 1, 13, 0, 0)));
+     * }
+     */
 
     @Test
     public void validarDadosRetorno() {
@@ -24,5 +32,13 @@ public class ConsultarDadosPessoaTeste {
         GerenciadorConexaoBD.finalizarConexao();
         System.out.println("Rodou finalizarConexao");
     }
+
+    /*
+     * public static void insereDados(Pessoa pessoa) {
+     * // insere pessoa no BD
+     * Logger.info("Inseriu dados");
+     * 
+     * }
+     */
 
 }
