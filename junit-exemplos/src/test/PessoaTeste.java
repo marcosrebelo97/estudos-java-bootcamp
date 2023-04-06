@@ -16,4 +16,10 @@ public class PessoaTeste {
         assertEquals(23, jessica.getIdade());
     }
 
+    @Test
+    public void deveRetornarSeEhMaiorDeIdade() {
+        Pessoa jessica = new Pessoa("Jéssica", LocalDateTime.of(2000, 1, 1, 15, 1, 1));
+        assertEquals(23, jessica.getIdade());
+    }
+
 }
