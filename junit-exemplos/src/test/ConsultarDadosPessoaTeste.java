@@ -1,10 +1,13 @@
 package test;
 
 import static org.junit.Assert.assertTrue;
+
+import java.time.LocalDateTime;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import main.GerenciadorConexaoBD;
+import main.Pessoa;
 
 public class ConsultarDadosPessoaTeste {
 
